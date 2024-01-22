@@ -1,0 +1,107 @@
+/* 
+   Integrantes:
+   * Palma Laz Ariel Leonardo
+   * Pincay Baque John Alexander
+   * Jhimy Andres Vergara Villacís
+   * Zambrano Mendoza Nelson Gustavo
+
+   Paralelo: "B"
+
+   Materia: DESARROLLO BASADO EN PLATAFORMA
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Concert One', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #c4f1c9;
+}
+
+.contorno {
+  width: 70vmin;
+  height: 75vmin;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5px;
+  background: #254a2a;
+  box-shadow: 0 20px 40px rgba(52, 87, 220, 0.2);
+}
+
+.game-details {
+  color: #d8e708;
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 20px 27px;
+  display: flex;
+  justify-content: space-between;
+}
+.zona {
+  height: 90%;
+  width: 100%;
+  display: grid;
+  background: #a7fafa;
+  grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+}
+.zona .food {
+  border-radius: 50%;
+	background: radial-gradient(rgb(197, 107, 107), darkred);
+
+	grid-area: 4 / 4;
+}
+.zona .snake {
+  background: #55e502;
+	box-shadow: 2px 2px 8px rgba(119, 116, 116, 0.7);
+  grid-area: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  color: rgb(19, 117, 24);
+  border-radius: 15%;
+}
+
+.controls {
+  display: none;
+  justify-content: space-between;
+}
+.controls i {
+  padding: 25px 0;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #d2d6dc;
+  width: calc(100% / 4);
+  cursor: pointer;
+  border-right: 1px solid #171B26;
+}
+
+@media screen and (max-width: 600px) {
+  .contorno {
+    width: 90vmin;
+    height: 130vmin;
+  }
+  .zona{
+    height: 80%;
+    width: 100%;  
+  }
+  .game-details {
+    font-size: 1rem;
+    padding: 15px 27px;
+  }
+  .controls {
+    display: flex;
+  }
+  .controls i {
+    padding: 15px 0;
+    font-size: 1rem;
+  }
+}
